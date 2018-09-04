@@ -29,9 +29,13 @@ $("#toDoList").keypress(function(event){
 	//extract the input
 	var inputText = $(this).val();
 	//make a new li to push to the ul
-	$("ul").append("<li><span>X</span> " + inputText + "</li>");
+	$("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> " + inputText + "</li>");
 	$(this).val("");
 	} 
 });
+
+$("#toggleBtn").click(function(){
+	$("input[type='text']").fadeToggle();
+})
 
 
